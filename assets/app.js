@@ -116,7 +116,6 @@
       b.setAttribute("aria-pressed", b.getAttribute("data-lang") === lang);
     });
 
-    $("#location").textContent = t(P.location);
     $("#role").innerHTML = t(P.role).split(" | ").map(function (part) {
       return '<span class="nowrap">' + esc(part) + "</span>";
     }).join(" | ");

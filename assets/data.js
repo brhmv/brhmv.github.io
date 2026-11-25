@@ -8,7 +8,6 @@ window.PORTFOLIO = {
   profile: {
     name: "Allahverdi İbrahimov",
     role: { az: "IT Layihə Meneceri | Junior RPA Developer", en: "IT Project Manager | Junior RPA Developer" },
-    location: { az: "Bakı, Azərbaycan", en: "Baku, Azerbaijan" },
     photo: "assets/profile.jpg",
     cv: "assets/Allahverdi_Ibrahimov_CV.pdf",
     email: "allahverdi.ibrahimov04@gmail.com",

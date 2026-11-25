@@ -185,7 +185,9 @@
 
   var activeFilter = "all";
   function renderFilters() {
-    var cats = Object.keys(D.projectCategories);
+    var cats = Object.keys(D.projectCategories).filter(function (k) {
+      return D.projects.some(function (p) { return p.category === k; });
+    });
     var btn = function (k, label, n) {
       return '<button type="button" role="tab" data-filter="' + k + '" aria-selected="' + (activeFilter === k) + '">' +
         esc(label) + ' <span class="count">' + n + "</span></button>";
@@ -224,6 +226,15 @@
 
   function renderEducation() {
     $("#eduList").innerHTML = D.education.map(function (e) {
+      if (e.featured) {
+        var live = e.end === "present";
+        return '<li class="edu__item edu__item--featured reveal">' +
+          '<div class="edu__top"><span class="edu__icon">' + ICON.cap + "</span>" +
+            '<span class="edu__level">' + esc(t(e.level)) + "</span></div>" +
+          '<div class="edu__body"><h3>' + esc(t(e.degree)) + "</h3><p>" + esc(t(e.school)) + "</p></div>" +
+          '<span class="edu__date">' + (live ? '<span class="live" aria-hidden="true"></span>' : "") +
+            range(e.start, e.end) + "</span></li>";
+      }
       return '<li class="edu__item reveal"><span class="edu__icon">' + ICON.cap + "</span>" +
         '<div class="edu__body"><h3>' + esc(t(e.degree)) + "</h3><p>" + esc(t(e.school)) + "</p></div>" +
         '<span class="edu__date">' + range(e.start, e.end) + "</span></li>";

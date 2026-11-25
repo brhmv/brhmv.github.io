@@ -27,7 +27,7 @@ window.PORTFOLIO = {
     },
     stats: [
       { value: "4+", label: { az: "il təcrübə", en: "years of experience" } },
-      { value: "9", label: { az: "seçilmiş layihə", en: "featured projects" } },
+      { value: "10", label: { az: "seçilmiş layihə", en: "featured projects" } },
       { value: "23", label: { az: "sertifikat", en: "certifications" } }
     ],
     languages: [
@@ -68,7 +68,7 @@ window.PORTFOLIO = {
           "Supervised delivery of digital marketing services — Google Ads, Meta Ads, SEO and social media ads — and optimized results."
         ]
       },
-      projects: ["CanRoof Construction", "Pergomatic", "Shower Door WA", "Mercedes-Benz Azerbaijan"]
+      projects: ["CanRoof Construction", "Pergomatic", "Shower Door WA", "Mercedes-Benz Azerbaijan", "Sea Breeze"]
     },
     {
       role: { az: "IT Layihə Meneceri", en: "IT Project Manager" },
@@ -133,11 +133,12 @@ window.PORTFOLIO = {
     { name: "Sannfresh", url: "https://sannfresh.com", company: "TexnoCode MMC", category: "web" },
     { name: "Adezula", url: "https://adezula.com", company: "TexnoCode MMC", category: "web" },
     { name: "Nintel", url: "https://nintel.net", company: "TexnoCode MMC", category: "web" },
+    { name: "Melhem Hospital", url: "https://www.melhemhospital.com", company: "Project Management Systems", category: "web" },
     { name: "Mercedes-Benz Azerbaijan", url: "https://www.mercedes-benz.com.az", company: "Roarads", category: "marketing" },
     { name: "CanRoof Construction", url: "https://canroofconstruction.com", company: "Roarads", category: "marketing" },
     { name: "Pergomatic", url: "https://pergomatic.com/louver-products/", company: "Roarads", category: "marketing" },
     { name: "Shower Door WA", url: "https://showerdoorwa.com", company: "Roarads", category: "marketing" },
-    { name: "Melhem Hospital", url: "https://www.melhemhospital.com", company: "Project Management Systems", category: "it" }
+    { name: "Sea Breeze", url: "https://seabreeze.az", company: "Roarads", category: "marketing" }
   ],
   projectCategories: {
     web: {
@@ -194,15 +195,25 @@ window.PORTFOLIO = {
   ],
 
   education: [
+    /* featured: true olan təhsil ali təhsil kimi ayrıca, fərqlənən kartda göstərilir */
     {
-      degree: { az: "Süni İntellekt üzrə magistr", en: "Master of Artificial Intelligence" },
+      featured: true,
+      level: { az: "Magistratura", en: "Master's degree" },
+      degree: { az: "Süni İntellekt üzrə magistr (SABAH qrupları)", en: "Master of Artificial Intelligence (SABAH Groups)" },
       school: { az: "Azərbaycan Dövlət Neft və Sənaye Universiteti", en: "Azerbaijan State Oil and Industry University" },
       start: "2025", end: "present"
     },
     {
+      featured: true,
+      level: { az: "Bakalavriat", en: "Bachelor's degree" },
       degree: { az: "İnformasiya Texnologiyaları üzrə bakalavr", en: "Bachelor of Information Technology" },
       school: { az: "Azərbaycan Dövlət Neft və Sənaye Universiteti", en: "Azerbaijan State Oil and Industry University" },
       start: "2021", end: "2025"
+    },
+    {
+      degree: { az: "Proqram Təminatının Hazırlanması", en: "Software Development" },
+      school: { az: "Step IT Academy", en: "Step IT Academy" },
+      start: "2021", end: "2024"
     },
     {
       degree: { az: "IT Layihələrin İdarə Olunması", en: "IT Project Management" },
@@ -213,11 +224,6 @@ window.PORTFOLIO = {
       degree: { az: "IT Layihələrin İdarə Olunması", en: "IT Project Management" },
       school: { az: "Tab Academy", en: "Tab Academy" },
       start: "2024-06", end: "2024-10"
-    },
-    {
-      degree: { az: "Proqram Təminatının Hazırlanması", en: "Software Development" },
-      school: { az: "Step IT Academy", en: "Step IT Academy" },
-      start: "2021", end: "2024"
     },
     {
       degree: { az: "Startap Layihələrin İdarə Olunması", en: "Startup Project Management" },

@@ -40,7 +40,7 @@ window.PORTFOLIO = {
     {
       role: { az: "IT Layihə Meneceri", en: "IT Project Manager" },
       company: "TexnoCode MMC",
-      start: "2026-06", end: "present",
+      start: "2026-06", end: "2026-11",
       points: {
         az: [
           "Rəqəmsal məhsulların və veb platformaların hazırlanmasını tələblərin toplanması və planlamadan inkişaf, testləşdirmə və yekun təhvilə qədər idarə etdim.",

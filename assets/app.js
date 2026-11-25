@@ -17,7 +17,7 @@
       backTop: "Yuxarı qayıt ↑",
       "dock.call": "Zəng", "dock.mail": "E-poçt",
       present: "İndi", all: "Hamısı", visit: "Sayta bax", featured: "Layihələr",
-      facts: { now: "Hazırda", edu: "Təhsil", langs: "Dillər", loc: "Məkan" },
+      facts: { now: "Hazırda", last: "Son iş yeri", edu: "Təhsil", langs: "Dillər", loc: "Məkan" },
       certsMore: "Hamısını göstər", certsLess: "Daha az göstər",
       copy: "Kopyala", copied: "Kopyalandı", shared: "Link kopyalandı",
       share: "Paylaş", call: "Zəng et", write: "Yaz",
@@ -36,7 +36,7 @@
       backTop: "Back to top ↑",
       "dock.call": "Call", "dock.mail": "Email",
       present: "Present", all: "All", visit: "Visit site", featured: "Projects",
-      facts: { now: "Currently", edu: "Education", langs: "Languages", loc: "Location" },
+      facts: { now: "Currently", last: "Most recent role", edu: "Education", langs: "Languages", loc: "Location" },
       certsMore: "Show all", certsLess: "Show less",
       copy: "Copy", copied: "Copied", shared: "Link copied",
       share: "Share", call: "Call", write: "Write",
@@ -155,7 +155,7 @@
         '</span><span class="bar"><span style="width:' + l.pct + '%"></span></span></li>';
     }).join("");
     $("#facts").innerHTML =
-      '<div class="fact">' + ICON.briefcase + '<div><span class="fact__k">' + f.now + '</span><span class="fact__v">' +
+      '<div class="fact">' + ICON.briefcase + '<div><span class="fact__k">' + (cur.end === "present" ? f.now : f.last) + '</span><span class="fact__v">' +
         esc(t(cur.role)) + " · " + esc(cur.company) + "</span></div></div>" +
       '<div class="fact">' + ICON.cap + '<div><span class="fact__k">' + f.edu + '</span><span class="fact__v">' +
         esc(t(edu.degree)) + '</span><span class="fact__s">' + esc(t(edu.school)) + "</span></div></div>" +

@@ -117,7 +117,9 @@
     });
 
     $("#location").textContent = t(P.location);
-    $("#role").textContent = t(P.role);
+    $("#role").innerHTML = t(P.role).split(" | ").map(function (part) {
+      return '<span class="nowrap">' + esc(part) + "</span>";
+    }).join(" | ");
     $("#intro").textContent = t(P.intro);
     $("#summary").textContent = t(P.summary);
     $("#cvLink").href = $("#dockCv").href = P.cv;

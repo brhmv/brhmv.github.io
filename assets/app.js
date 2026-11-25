@@ -9,13 +9,13 @@
       skip: "Məzmuna keç",
       "nav.about": "Haqqımda", "nav.experience": "Təcrübə", "nav.projects": "Layihələr",
       "nav.skills": "Bacarıqlar", "nav.education": "Təhsil", "nav.contact": "Əlaqə",
-      "cta.save": "Kontaktı yadda saxla", "cta.cv": "CV yüklə",
+      "cta.cv": "CV yüklə",
       "projects.lead": "Rəhbərlik etdiyim və iştirak etdiyim seçilmiş layihələr.",
       "certs.title": "Sertifikatlar",
       "contact.title": "Gəlin birlikdə işləyək",
       "contact.lead": "Layihə, əməkdaşlıq və ya iş təklifi üçün mənimlə istənilən kanal vasitəsilə əlaqə saxlaya bilərsiniz.",
       backTop: "Yuxarı qayıt ↑",
-      "dock.call": "Zəng", "dock.mail": "E-poçt", "dock.save": "Yadda saxla",
+      "dock.call": "Zəng", "dock.mail": "E-poçt",
       present: "İndi", all: "Hamısı", visit: "Sayta bax", featured: "Layihələr",
       facts: { now: "Hazırda", edu: "Təhsil", langs: "Dillər", loc: "Məkan" },
       certsMore: "Hamısını göstər", certsLess: "Daha az göstər",
@@ -28,13 +28,13 @@
       skip: "Skip to content",
       "nav.about": "About", "nav.experience": "Experience", "nav.projects": "Projects",
       "nav.skills": "Skills", "nav.education": "Education", "nav.contact": "Contact",
-      "cta.save": "Save contact", "cta.cv": "Download CV",
+      "cta.cv": "Download CV",
       "projects.lead": "Selected projects I have led and contributed to.",
       "certs.title": "Certifications",
       "contact.title": "Let’s work together",
       "contact.lead": "For projects, collaboration or job opportunities, reach me through any channel below.",
       backTop: "Back to top ↑",
-      "dock.call": "Call", "dock.mail": "Email", "dock.save": "Save",
+      "dock.call": "Call", "dock.mail": "Email",
       present: "Present", all: "All", visit: "Visit site", featured: "Projects",
       facts: { now: "Currently", edu: "Education", langs: "Languages", loc: "Location" },
       certsMore: "Show all", certsLess: "Show less",
@@ -120,8 +120,7 @@
     $("#role").textContent = t(P.role);
     $("#intro").textContent = t(P.intro);
     $("#summary").textContent = t(P.summary);
-    $("#saveContact").href = $("#dockSave").href = P.vcard;
-    $("#cvLink").href = P.cv;
+    $("#cvLink").href = $("#dockCv").href = P.cv;
     $("#dockCall").href = tel;
     $("#dockMail").href = mail;
     $("#year").textContent = new Date().getFullYear();
@@ -265,7 +264,7 @@
     $("#contactList").innerHTML = rows.map(function (r) {
       return '<li class="crow"><a class="crow__main" href="' + r.href + '"' + (r.ext ? ' target="_blank" rel="noopener"' : "") + ">" +
         '<span class="crow__icon">' + ICON[r.k] + '</span><span class="crow__text"><span class="crow__k">' + r.label +
-        '</span><span class="crow__v">' + esc(r.value) + "</span></span></a>" +
+        '</span><span class="crow__v">' + esc(r.value).replace("@", "@<wbr>") + "</span></span></a>" +
         (r.copy ? '<button type="button" class="icon-btn crow__copy" data-copy="' + esc(r.copy) + '" aria-label="' + u("copy") + " " + r.label + '" title="' + u("copy") + '">' + ICON.copy + "</button>"
                 : '<span class="crow__arrow" aria-hidden="true">' + ICON.arrow + "</span>") +
         "</li>";

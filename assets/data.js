@@ -11,7 +11,6 @@ window.PORTFOLIO = {
     location: { az: "Bakı, Azərbaycan", en: "Baku, Azerbaijan" },
     photo: "assets/profile.jpg",
     cv: "assets/Allahverdi_Ibrahimov_CV.pdf",
-    vcard: "assets/contact.vcf",
     email: "allahverdi.ibrahimov04@gmail.com",
     phone: "+994 70 563 98 90",
     whatsapp: "994705639890",
